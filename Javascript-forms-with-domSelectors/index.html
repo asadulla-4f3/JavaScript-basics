@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - Contact Form and form validation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main class="contactFormContainer">
+        <h2>Contact Us</h2>
+        <form id="contactForm" novalidate>
+            <div class="contactName">
+                <div class="flexField name">
+                    <label class="label" for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                    <span class="noError" id="firstNameError"></span>
+                </div>
+                <div class="flexField name">
+                    <label class="label" for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                    <span class="noError" id="lastNameError"></span>
+                </div>
+            </div>
+            <div class="flexField">
+                <label class="label" for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+                <span class="noError" id="emailError"></span>
+            </div>
+            <div>
+                <fieldset>
+                    <legend class="label">Query Type</legend>
+                    <!-- <div class="radioFlex">
+                        <div class="radioField">
+                            <input type="radio" id="generalQuery" name="queryType" value="general" required>
+                            <label class="label" for="generalQuery">General Enquiry</label>
+                        </div>
+                        <div class="radioField">
+                            <input type="radio" id="supportRequest" name="queryType" value="support" required>
+                            <label class="label" for="supportRequest">Support Request</label>
+                        </div>
+                    </div> -->
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="option" value="general" required>
+                            General Enquiry
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="option" value="support" required>
+                            Support Request
+                        </label>
+                    </div>
+                    <span class="noError" id="queryTypeError"></span>
+                </fieldset>
+            </div>
+            <div class="flexField">
+                <label class="label" for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <span class="noError" id="messageError"></span>
+            </div>
+            <div>
+                <div class="chkField">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label class="label chkLabel" for="terms">I consent to being contacted by the team</label>
+                </div>
+                <span class="noError" id="termsError"></span>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+
+        <script src="main.js"></script>
+    </main>
+</body>
+
+</html>
